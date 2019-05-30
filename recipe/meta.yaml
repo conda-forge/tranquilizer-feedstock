@@ -1,5 +1,5 @@
 {% set name = "tranquilizer" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/albertdefusco/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: f8f88bd9eeaf2cc1f55a8cbfbb886b672d9dc2feb2e57fdeccf145b0f9de033a
+  sha256: 8d70613b58c2a7556953079fef44769f417b970653fccedc00193132b2642408
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
