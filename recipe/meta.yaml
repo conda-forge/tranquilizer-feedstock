@@ -1,5 +1,5 @@
 {% set name = "tranquilizer" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/albertdefusco/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 8d70613b58c2a7556953079fef44769f417b970653fccedc00193132b2642408
+  sha256: 4688a266fcd55d1030bdb4ff1ec1b23ebedc7b04ad82a849a17727d89a23a557
 
 build:
   number: 0
