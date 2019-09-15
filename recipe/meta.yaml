@@ -10,7 +10,7 @@ source:
   sha256: 4688a266fcd55d1030bdb4ff1ec1b23ebedc7b04ad82a849a17727d89a23a557
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.5, <3.7
     - flask
-    - werkzeug
+    - werkzeug >=0.15
     - flask-restplus
     - python-dateutil
 
