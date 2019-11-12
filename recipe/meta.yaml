@@ -1,5 +1,5 @@
 {% set name = "tranquilizer" %}
-{% set version = "0.3.3" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,21 @@ package:
 
 source:
   url: https://github.com/albertdefusco/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 4688a266fcd55d1030bdb4ff1ec1b23ebedc7b04ad82a849a17727d89a23a557
+  sha256: 4eb9bed35647c69ecd7a36cf5d698b8dfc913493346b44e733077e20f7a6f805
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
-    - tranquilizer = tranquilizer.__main__:main
+    - tranquilizer = tranquilizer.main:run
 
 requirements:
   host:
-    - python >=3.5, <3.7
+    - python >=3.5, <3.8
     - pip
   run:
-    - python >=3.5, <3.7
+    - python >=3.5, <3.8
     - flask
     - werkzeug >=0.15
     - flask-restplus
