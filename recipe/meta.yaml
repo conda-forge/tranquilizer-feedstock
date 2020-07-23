@@ -1,5 +1,5 @@
 {% set name = "tranquilizer" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0ca826ce6e0853c7a90573360de8c85ea6373045f260c13f38fd357d2bd0abd2
+  sha256: 8adaa11f15a0c159301733c77d8cfddf4cac785c56284c2e4d51224ca3dd0daf
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
     - tranquilizer = tranquilizer.main:run
 
@@ -23,8 +23,8 @@ requirements:
   run:
     - python >=3.5, <3.9
     - flask
-    - werkzeug >=0.15, <1.0
-    - flask-restplus
+    - werkzeug >=0.15, <2.0
+    - flask-restx
     - python-dateutil
 
 test:
@@ -34,11 +34,11 @@ test:
     - tranquilizer --help
 
 about:
-  home: http://github.com/AlbertDeFusco/tranquilizer
+  home: http://github.com/ContinuumIO/tranquilizer
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Put your Python functions to REST; deploy a REST API with one line by decorating your functions.'
+  summary: Put your Python functions to REST; deploy a REST API with one line by decorating your functions.
 
 extra:
   recipe-maintainers:

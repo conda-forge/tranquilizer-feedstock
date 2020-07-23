@@ -5,7 +5,7 @@ Home: http://github.com/AlbertDeFusco/tranquilizer
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Put your Python functions to REST; deploy a REST API with one line by decorating your functions.
 
