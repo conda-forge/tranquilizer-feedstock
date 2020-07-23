@@ -23,8 +23,8 @@ requirements:
   run:
     - python >=3.5, <3.9
     - flask
-    - werkzeug >=0.15, <1.0
-    - flask-restplus
+    - werkzeug >=0.15, <2.0
+    - flask-restx
     - python-dateutil
 
 test:
@@ -34,7 +34,7 @@ test:
     - tranquilizer --help
 
 about:
-  home: http://github.com/AlbertDeFusco/tranquilizer
+  home: http://github.com/ContinuumIO/tranquilizer
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
