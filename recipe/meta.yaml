@@ -27,7 +27,7 @@ requirements:
     - flask-restx
     - python-dateutil
     - flask-cors
-    - flask-jwt-extended>=4
+    - flask-jwt-extended >=4
 
 test:
   imports:
