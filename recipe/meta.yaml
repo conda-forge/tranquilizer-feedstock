@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.6, <3.10
     - flask
-    - werkzeug >=0.15
+    - werkzeug >=0.15,<=2.1.2
     - flask-restx
     - python-dateutil
     - flask-cors
