@@ -10,7 +10,7 @@ source:
   sha256: 95a59c07b992fb0a733dfd3402039320fa3ff118c99bd9190e607367dfd2df07
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -33,12 +33,14 @@ test:
   requires:
     - archspec
     - py-cpuinfo
+    - {{ compiler('c') }}
   imports:
     - tranquilizer
   commands:
     - tranquilizer --help
     - archspec cpu
     - cpuinfo
+    - $CC -march=native -E -v - </dev/null 2>&1 | grep cc1
 
 about:
   home: http://github.com/ContinuumIO/tranquilizer
