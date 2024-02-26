@@ -30,10 +30,15 @@ requirements:
     - flask-jwt-extended >=4
 
 test:
+  requires:
+    - archspec
+    - py-cpuinfo
   imports:
     - tranquilizer
   commands:
     - tranquilizer --help
+    - archspec cpu
+    - cpuinfo
 
 about:
   home: http://github.com/ContinuumIO/tranquilizer
