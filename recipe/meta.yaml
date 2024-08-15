@@ -1,5 +1,5 @@
 {% set name = "tranquilizer" %}
-{% set version = "0.8.1" %}
+{% set version = "0.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/t/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 95a59c07b992fb0a733dfd3402039320fa3ff118c99bd9190e607367dfd2df07
+  sha256: 05e27d1fd61534efdd300ebaaa0828201121fae71886d1c8a287a99f870a36ed
 
 build:
   number: 0
@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python >=3.6, <3.10
+    - python >=3.6, <3.13
     - pip
   run:
-    - python >=3.6, <3.10
+    - python >=3.6, <3.13
     - flask
     - werkzeug >=0.15,<=2.1.2
     - flask-restx
